@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.nothapp.appfuniture">
+    package="com.noth.nothapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,40 +13,40 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppFuniture"
+        android:theme="@style/Theme.NothApp"
         tools:targetApi="31">
         <activity
-            android:name="com.nothapp.appfuniture.activity.TiepTucMuaActivity"
+            android:name="com.noth.nothapp.activity.TiepTucMuaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.nothapp.appfuniture.activity.ThanhToanActivity"
+            android:name="com.noth.nothapp.activity.ThanhToanActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.nothapp.appfuniture.activity.SearchActivity"
+            android:name="com.noth.nothapp.activity.SearchActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.nothapp.appfuniture.activity.GioHangActivity"
+            android:name="com.noth.nothapp.activity.GioHangActivity"
             android:exported="false" />
         <activity
-            android:name="com.nothapp.appfuniture.activity.DetailsActivity"
+            android:name="com.noth.nothapp.activity.DetailsActivity"
             android:exported="false" />
         <activity
-            android:name="com.nothapp.appfuniture.activity.ConfirmSignupActivity"
+            android:name="com.noth.nothapp.activity.ConfirmSignupActivity"
             android:exported="false" />
         <activity
-            android:name="com.nothapp.appfuniture.activity.SigninActivity"
+            android:name="com.noth.nothapp.activity.SigninActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,10 +55,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.nothapp.appfuniture.activity.SignupActivity"
+            android:name="com.noth.nothapp.activity.SignupActivity"
             android:exported="false" />
         <activity
-            android:name="com.nothapp.appfuniture.activity.MainActivity"
+            android:name="com.noth.nothapp.activity.MainActivity"
             android:exported="false" />
     </application>
 
