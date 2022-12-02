@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,12 +13,14 @@ import com.nothapp.appfuniture.databinding.ActivitySignupBinding;
 import com.nothapp.appfuniture.SQLite.SQLiteHelper;
 
 public class SignupActivity extends AppCompatActivity {
-    private ActivitySignupBinding binding;
-    private SQLiteHelper sqLiteHelper;
+    ActivitySignupBinding binding;
+    SQLiteHelper sqLiteHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_signup);
+        setContentView(R.layout.activity_signup);
+        binding = ActivitySignupBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         sqLiteHelper = new SQLiteHelper(SignupActivity.this,"Database.sqlite",null,1);
         binding.imgBack.setOnClickListener(new View.OnClickListener() {
             @Override

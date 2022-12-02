@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.nothapp.appfuniture.activity.SearchActivity">
+    tools:context="com.nothapp.appfuniture.activity.SearchActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,20 +24,20 @@
             <androidx.appcompat.widget.SearchView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="25dp"
-                android:layout_toRightOf="@id/imgBack"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_toEndOf="@id/imgBack"
                 android:background="@drawable/custom_editext"
-                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawableStart="@drawable/ic_baseline_search_24"
                 app:queryHint="Tìm kiếm"
                 android:id="@+id/searchView"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
             <RelativeLayout
                 android:layout_width="55dp"
                 android:layout_height="50dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/custom_btn">
                 <ImageView
                     android:layout_width="30dp"
@@ -44,10 +47,10 @@
             </RelativeLayout>
         </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/recyLerSearch"
-            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp" />
     </LinearLayout>
-</layout>
+</LinearLayout>

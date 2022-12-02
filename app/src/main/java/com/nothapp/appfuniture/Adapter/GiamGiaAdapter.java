@@ -3,7 +3,6 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.nothapp.appfuniture.databinding.ItemGiamGiaBinding;
 import com.nothapp.appfuniture.Model.GiamGia;
 
@@ -40,10 +39,11 @@ public class GiamGiaAdapter extends RecyclerView.Adapter<GiamGiaAdapter.GiamGiaV
         int getCount();
         GiamGia getListSale(int position);
     }
+
     public class GiamGiaViewHolder extends RecyclerView.ViewHolder{
         private ItemGiamGiaBinding binding;
         public GiamGiaViewHolder(@NonNull ItemGiamGiaBinding binding) {
-            super(binding.getRoot());
+            super(binding.txtGiamGia.getRootView());
             this.binding = binding;
         }
     }

@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
@@ -19,12 +18,14 @@ import java.util.Locale;
 
 public class GioHangActivity extends AppCompatActivity implements GioHangAdapter.IGioHang {
     private static ActivityGioHangBinding binding;
-    private static GioHangAdapter adapter;
+    GioHangAdapter adapter;
     int slMua = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_gio_hang);
+        setContentView(R.layout.activity_gio_hang);
+        binding = ActivityGioHangBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         adapter = new GioHangAdapter(this);
         initRecylerViewGioHang();
         onClickBack();

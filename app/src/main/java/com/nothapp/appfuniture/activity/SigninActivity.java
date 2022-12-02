@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -17,14 +16,16 @@ import com.nothapp.appfuniture.SQLite.SQLiteHelper;
 import java.util.ArrayList;
 
 public class SigninActivity extends AppCompatActivity {
-    private ActivitySigninBinding binding;
-    private SQLiteHelper sqLiteHelper;
-    private ArrayList<User> userArrayList;
-    private boolean check;
+    ActivitySigninBinding binding;
+    SQLiteHelper sqLiteHelper;
+    ArrayList<User> userArrayList;
+    boolean check;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_signin);
+        setContentView(R.layout.activity_signin);
+        binding = ActivitySigninBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         initSQLite();
         userArrayList = new ArrayList<>();
         //Lấy dữ liệu từ bảng User sau đó add vào list

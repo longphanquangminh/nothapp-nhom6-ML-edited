@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +10,13 @@ import com.nothapp.appfuniture.R;
 import com.nothapp.appfuniture.databinding.ActivityConfirmSignupBinding;
 
 public class ConfirmSignupActivity extends AppCompatActivity {
-    private ActivityConfirmSignupBinding binding;
+    ActivityConfirmSignupBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_confirm_signup);
+        setContentView(R.layout.activity_confirm_signup);
+        binding = ActivityConfirmSignupBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         binding.imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

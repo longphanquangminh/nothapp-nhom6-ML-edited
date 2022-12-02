@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.nothapp.appfuniture.activity.GioHangActivity">
+    tools:context="com.nothapp.appfuniture.activity.GioHangActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Giỏ hàng"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:id="@+id/txtGioHang"
@@ -32,19 +35,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/txtGioHang"
+                android:layout_toEndOf="@id/txtGioHang"
                 android:padding="10dp"
                 android:text="(1)"
                 android:id="@+id/txtSoLuongSP"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/ic_chat"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
                 android:layout_centerVertical="true"/>
         </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView
@@ -66,8 +69,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tổng thanh toán"
-                android:textSize="18dp"
-                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
@@ -75,9 +78,9 @@
                 android:layout_height="wrap_content"
                 android:text="vnd 0"
                 android:textColor="#5051A2"
-                android:textSize="22dp"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:id="@+id/txtTongTienThanhToan"/>
         </LinearLayout>
 
@@ -103,7 +106,7 @@
                     android:text="Mua hàng"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:padding="10dp"
                     android:gravity="center_horizontal"/>
                 <TextView
@@ -111,14 +114,14 @@
                     android:layout_height="wrap_content"
                     android:text="("
                     android:textColor="@color/white"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textColor="@color/white"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:id="@+id/txtSoLuongMuaHang"/>
                 <TextView
@@ -126,9 +129,9 @@
                     android:layout_height="wrap_content"
                     android:text=")"
                     android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
-</layout>
+</LinearLayout>

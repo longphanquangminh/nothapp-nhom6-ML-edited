@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +11,13 @@ import com.nothapp.appfuniture.databinding.ActivityTiepTucMuaBinding;
 import com.nothapp.appfuniture.Utils.Util;
 
 public class TiepTucMuaActivity extends AppCompatActivity {
-    private ActivityTiepTucMuaBinding binding;
+    ActivityTiepTucMuaBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_tiep_tuc_mua);
+        setContentView(R.layout.activity_tiep_tuc_mua);
+        binding = ActivityTiepTucMuaBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         Intent intent = getIntent();
         int slMuaHang = intent.getIntExtra("soluong",0);
         binding.txtSoLuongDonHang.setText(String.valueOf(slMuaHang));

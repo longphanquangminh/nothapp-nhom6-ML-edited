@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +10,13 @@ import com.nothapp.appfuniture.R;
 import com.nothapp.appfuniture.databinding.ActivityThanhToanBinding;
 
 public class ThanhToanActivity extends AppCompatActivity {
-    private ActivityThanhToanBinding binding;
+    ActivityThanhToanBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_thanh_toan);
+        setContentView(R.layout.activity_thanh_toan);
+        binding = ActivityThanhToanBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         Intent intent = getIntent();
         int slMuaHang = intent.getIntExtra("soluong",0);
         binding.txtSoLuongDonHang.setText(String.valueOf(slMuaHang));

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.nothapp.appfuniture.activity.MainActivity">
+    tools:context="com.nothapp.appfuniture.activity.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent">
@@ -12,7 +15,7 @@
           android:layout_height="match_parent">
          <LinearLayout
              android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             android:layout_height="wrap_content"
              android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -40,8 +43,8 @@
                <TextView
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:layout_marginLeft="15dp"
-                   android:layout_marginRight="25dp"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="25dp"
                    android:background="@drawable/custom_editext"
                    android:drawableLeft="@drawable/ic_baseline_search_24"
                    android:drawablePadding="15dp"
@@ -49,13 +52,12 @@
                    android:id="@+id/edtSearch"
                    android:padding="15dp"
                    android:textColor="@color/black"
-                   android:textSize="20dp" />
+                   android:textSize="20sp" />
                <RelativeLayout
                    android:layout_width="60dp"
                    android:layout_height="58dp"
                    android:layout_alignParentEnd="true"
                    android:layout_marginEnd="20dp"
-                   android:layout_marginRight="15dp"
                    android:background="@drawable/custom_btn">
 
                   <ImageView
@@ -68,7 +70,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:id="@+id/recycLerMenu"/>
             <RelativeLayout
@@ -81,35 +83,35 @@
                    android:layout_height="wrap_content"
                    android:text="Giảm giá"
                    android:textColor="@color/black"
-                   android:textSize="23dp"
+                   android:textSize="23sp"
                    android:textStyle="bold" />
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Xem tất cả >"
-                   android:textSize="20dp"
-                   android:layout_alignParentRight="true"/>
+                   android:textSize="20sp"
+                   android:layout_alignParentEnd="true"/>
             </RelativeLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:id="@+id/recylerGiamGia"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Phổ biến"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:textColor="@color/black"
-                android:textSize="23dp"
+                android:textSize="23sp"
                 android:layout_marginTop="15dp"
                 android:textStyle="bold"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recylerPhoBien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"/>
          </LinearLayout>
       </ScrollView>
@@ -132,6 +134,7 @@
              android:layout_gravity="center_vertical"
              android:layout_weight="1"/>
          <ImageView
+             android:id="@+id/imvGioHang"
              android:layout_width="35dp"
              android:layout_height="35dp"
              android:src="@drawable/ic_baseline_shopping_cart_24"
@@ -151,4 +154,4 @@
              android:layout_weight="1"/>
       </LinearLayout>
    </RelativeLayout>
-</layout>
+</LinearLayout>

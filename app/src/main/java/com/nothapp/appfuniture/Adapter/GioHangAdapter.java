@@ -94,7 +94,7 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GioHangV
     public class GioHangViewHolder extends RecyclerView.ViewHolder{
         private ItemGioHangBinding binding;
         public GioHangViewHolder(@NonNull ItemGioHangBinding binding) {
-            super(binding.getRoot());
+            super(binding.txtNumber.getRootView());
             this.binding = binding;
         }
     }

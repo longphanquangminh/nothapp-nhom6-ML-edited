@@ -2,7 +2,6 @@ package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.content.Intent;
@@ -18,14 +17,16 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class SearchActivity extends AppCompatActivity implements PhoBienAdapter.IPopular {
-    private ActivitySearchBinding binding;
-    private ArrayList<Popular> popularArrayList;
-    private ArrayList<Popular> searchArrayList;
-    private PhoBienAdapter adapter;
+    ActivitySearchBinding binding;
+    ArrayList<Popular> popularArrayList;
+    ArrayList<Popular> searchArrayList;
+    PhoBienAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_search);
+        setContentView(R.layout.activity_search);
+        binding = ActivitySearchBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         popularArrayList = new ArrayList<>();
         searchArrayList = new ArrayList<>();
         adapter = new PhoBienAdapter(this);

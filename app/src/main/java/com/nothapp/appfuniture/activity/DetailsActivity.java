@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -18,13 +17,15 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 public class DetailsActivity extends AppCompatActivity {
-    private ActivityDetailsBinding binding;
-    private Popular popular;
-    private int numberOder = 1;
+    ActivityDetailsBinding binding;
+    Popular popular;
+    int numberOder = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_details);
+        setContentView(R.layout.activity_details);
+        binding = ActivityDetailsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         onShowData();
         onBack();
         customNumberOder();

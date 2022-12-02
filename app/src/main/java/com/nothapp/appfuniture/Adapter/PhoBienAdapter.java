@@ -57,7 +57,7 @@ public class PhoBienAdapter extends RecyclerView.Adapter<PhoBienAdapter.PhoBienV
     public class PhoBienViewHolder extends RecyclerView.ViewHolder{
         ItemPhoBienBinding binding;
         public PhoBienViewHolder(@NonNull ItemPhoBienBinding binding) {
-            super(binding.getRoot());
+            super(binding.namePopular.getRootView());
             this.binding = binding;
         }
     }

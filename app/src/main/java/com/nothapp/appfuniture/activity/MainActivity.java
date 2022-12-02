@@ -1,7 +1,6 @@
 package com.nothapp.appfuniture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Intent;
@@ -23,19 +22,19 @@ import com.nothapp.appfuniture.R;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements CategoryAdapter.iCategory, GiamGiaAdapter.ISale, PhoBienAdapter.IPopular {
-    private ActivityMainBinding binding;
+    ActivityMainBinding binding;
     int current;
     Runnable runnable;
-    private ArrayList<Category> categoryArrayList;
-    private ArrayList<GiamGia> giamGiaArrayList;
-    private ArrayList<Popular> phoBienArrayList;
-    private CategoryAdapter categoryAdapter;
-    private GiamGiaAdapter giamGiaAdapter;
-    private PhoBienAdapter phoBienAdapter;
+    ArrayList<Category> categoryArrayList;
+    ArrayList<GiamGia> giamGiaArrayList;
+    ArrayList<Popular> phoBienArrayList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         categoryArrayList = new ArrayList<>();
         giamGiaArrayList = new ArrayList<>();
         phoBienArrayList = new ArrayList<>();
@@ -47,6 +46,16 @@ public class MainActivity extends AppCompatActivity implements CategoryAdapter.i
         intiReclerGiamGia();
         initRecylerPhoBien();
         onClickSearch();
+        onClickCart();
+    }
+
+    private void onClickCart() {
+        binding.imvGioHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, GioHangActivity.class));
+            }
+        });
     }
 
     private void onClickSearch() {
@@ -60,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements CategoryAdapter.i
 
     private void initRecylerPhoBien() {
         //khởi tạo adapter và hiển thị dữ liệu lên recyclerView
-        phoBienAdapter = new PhoBienAdapter(this);
+        PhoBienAdapter phoBienAdapter = new PhoBienAdapter(this);
         binding.recylerPhoBien.setLayoutManager(new GridLayoutManager(this,2));
         binding.recylerPhoBien.setAdapter(phoBienAdapter);
     }
@@ -91,13 +100,13 @@ public class MainActivity extends AppCompatActivity implements CategoryAdapter.i
     }
 
     private void intiReclerGiamGia() {
-        giamGiaAdapter = new GiamGiaAdapter(this);
+        GiamGiaAdapter giamGiaAdapter = new GiamGiaAdapter(this);
         binding.recylerGiamGia.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         binding.recylerGiamGia.setAdapter(giamGiaAdapter);
     }
 
     private void initRecylerCategory() {
-        categoryAdapter = new CategoryAdapter(this);
+        CategoryAdapter categoryAdapter = new CategoryAdapter(this);
         binding.recycLerMenu.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         binding.recycLerMenu.setAdapter(categoryAdapter);
     }
@@ -170,4 +179,5 @@ public class MainActivity extends AppCompatActivity implements CategoryAdapter.i
         intent.putExtras(bundle);
         startActivity(intent);
     }
+
 }

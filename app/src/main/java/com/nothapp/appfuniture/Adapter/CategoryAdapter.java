@@ -41,7 +41,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     public class CategoryViewHolder extends RecyclerView.ViewHolder{
         ItemCategoryBinding binding;
         public CategoryViewHolder(@NonNull ItemCategoryBinding binding) {
-            super(binding.getRoot());
+            super(binding.txtNameCategory.getRootView());
             this.binding = binding;
         }
     }
