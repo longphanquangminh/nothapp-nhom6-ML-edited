@@ -14,7 +14,7 @@ public class ThanhToanActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thanh_toan);
+        // setContentView(R.layout.activity_thanh_toan);
         binding = ActivityThanhToanBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Intent intent = getIntent();

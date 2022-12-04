@@ -23,7 +23,7 @@ public class GioHangActivity extends AppCompatActivity implements GioHangAdapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gio_hang);
+        // setContentView(R.layout.activity_gio_hang);
         binding = ActivityGioHangBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         adapter = new GioHangAdapter(this);

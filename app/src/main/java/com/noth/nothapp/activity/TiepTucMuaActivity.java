@@ -15,7 +15,7 @@ public class TiepTucMuaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tiep_tuc_mua);
+        // setContentView(R.layout.activity_tiep_tuc_mua);
         binding = ActivityTiepTucMuaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Intent intent = getIntent();
